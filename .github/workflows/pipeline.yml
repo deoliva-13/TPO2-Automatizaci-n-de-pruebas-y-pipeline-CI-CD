@@ -1,0 +1,31 @@
+name: Pipeline CI/CD - Analizador de Texto
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v3
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Ejecutar tests y generar reporte
+        run: pytest tests/test_analisis.py -v --html=reports/reporte.html --self-contained-html
+
+      - name: Subir reporte como artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: reporte-tests
+          path: reports/reporte.html
