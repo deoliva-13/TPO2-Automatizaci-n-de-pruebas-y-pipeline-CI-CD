@@ -15,7 +15,7 @@ from app.funciones import (
 
 def test_contar_palabras_exitoso():
     """TC01 - Texto normal con múltiples palabras"""
-    assert contar_palabras("Hola mundo cruel") == 3
+    assert contar_palabras("Hola mundo lindo") == 3
 
 def test_contar_palabras_error():
     """TC02 - Texto vacío"""
@@ -95,7 +95,7 @@ def test_palabra_mas_larga_borde():
 
 def test_palabra_mas_larga_empate():
     """TC - Dos palabras con la misma longitud máxima"""
-    assert palabra_mas_larga("mundo estás") == ["mundo", "estás"]
+    assert palabra_mas_larga("Hola mundo lindo") == ["mundo", "lindo"]
 
 
 # =============================================
