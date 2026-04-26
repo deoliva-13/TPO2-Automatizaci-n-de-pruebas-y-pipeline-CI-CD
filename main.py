@@ -8,6 +8,7 @@ from app.funciones import (
     tiene_numeros
 )
 
+
 if __name__ == "__main__":
     texto = "Hola mundo. Cómo estás? Todo bien!"
 
