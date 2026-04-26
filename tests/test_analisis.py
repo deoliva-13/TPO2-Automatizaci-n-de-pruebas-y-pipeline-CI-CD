@@ -94,7 +94,7 @@ def test_palabra_mas_larga_borde():
     assert palabra_mas_larga("a bb. ccc") == ["ccc"]
 
 def test_palabra_mas_larga_empate():
-    """TC - Dos palabras con la misma longitud máxima"""
+    """TC16 - Dos palabras con la misma longitud máxima"""
     assert palabra_mas_larga("Hola mundo lindo") == ["mundo", "lindo"]
 
 
@@ -103,15 +103,15 @@ def test_palabra_mas_larga_empate():
 # =============================================
 
 def test_es_pregunta_exitoso():
-    """TC16 - Texto que es una pregunta"""
+    """TC17 - Texto que es una pregunta"""
     assert es_pregunta("¿Cómo estás?") == True
 
 def test_es_pregunta_error():
-    """TC17 - Texto que no es una pregunta"""
+    """TC18 - Texto que no es una pregunta"""
     assert es_pregunta("Hola mundo.") == False
 
 def test_es_pregunta_borde():
-    """TC18 - Solo el signo de pregunta"""
+    """TC19 - Solo el signo de pregunta"""
     assert es_pregunta("?") == True
 
 
@@ -120,13 +120,13 @@ def test_es_pregunta_borde():
 # =============================================
 
 def test_tiene_numeros_exitoso():
-    """TC19 - Texto con número"""
+    """TC20 - Texto con número"""
     assert tiene_numeros("Tengo 3 gatos") == True
 
 def test_tiene_numeros_error():
-    """TC20 - Texto sin números"""
+    """TC21 - Texto sin números"""
     assert tiene_numeros("Hola mundo") == False
 
 def test_tiene_numeros_borde():
-    """TC21 - Texto vacío"""
+    """TC22 - Texto vacío"""
     assert tiene_numeros("") == False
